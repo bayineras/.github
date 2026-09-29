@@ -1,0 +1,39 @@
+name: Yeni özellik
+description: Yeni bir özellik ya da davranış değişikliği
+title: "[ÖZELLİK] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: ozet
+    attributes:
+      label: Ne isteniyor?
+      description: Kullanıcı / sahadaki kişi ne görecek, ne yapabilecek?
+    validations:
+      required: true
+  - type: checkboxes
+    id: kapsam
+    attributes:
+      label: Etkilenen ürünler
+      options:
+        - label: Panel
+        - label: Sunucu
+        - label: Makine uygulaması (tablet)
+        - label: Mobil uygulama
+        - label: Kart firmware
+  - type: dropdown
+    id: api
+    attributes:
+      label: Sunucu API'si değişiyor mu?
+      description: Evet ise önce sözleşme PR'ı açılır, implementasyon sonra.
+      options:
+        - Hayır
+        - Evet
+        - Bilmiyorum
+  - type: textarea
+    id: kabul
+    attributes:
+      label: Kabul kriterleri
+      description: Ne olursa iş bitmiş sayılır?
+      placeholder: |
+        - [ ]
+        - [ ]

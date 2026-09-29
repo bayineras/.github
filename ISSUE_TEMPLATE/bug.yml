@@ -1,0 +1,49 @@
+name: Hata
+description: Bir şey çalışmıyor ya da yanlış çalışıyor
+title: "[HATA] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: urun
+    attributes:
+      label: Hangi üründe?
+      options:
+        - Panel
+        - Sunucu
+        - Makine uygulaması (tablet)
+        - Mobil uygulama
+        - Kart firmware
+        - Diğer / bilmiyorum
+    validations:
+      required: true
+  - type: input
+    id: surum
+    attributes:
+      label: Sürüm
+      description: Uygulama / firmware sürümü, biliniyorsa cihaz seri no
+  - type: dropdown
+    id: kaynak
+    attributes:
+      label: Nereden geldi?
+      options:
+        - Geliştirme / test sırasında
+        - Sahadan / müşteriden
+  - type: textarea
+    id: ne-oldu
+    attributes:
+      label: Ne oluyor, ne olmalıydı?
+    validations:
+      required: true
+  - type: textarea
+    id: adimlar
+    attributes:
+      label: Tekrar üretme adımları
+      placeholder: |
+        1.
+        2.
+        3.
+  - type: textarea
+    id: ek
+    attributes:
+      label: Log / ekran görüntüsü
+      description: Log, ekran görüntüsü, video. Şifre / token / müşteri bilgisi koyma.
