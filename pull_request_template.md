@@ -6,7 +6,11 @@
 
 Closes #
 
-<!-- "Closes #<no>" issue'yu merge'de kapatır ve panodaki kartı doğru sütuna taşır. -->
+<!--
+  İşi BİTİREN son PR:        Closes #<no>   → iş In Review'a, merge'de Done'a geçer
+  Sözleşme / ara PR:         Part of #<no>  → iş In progress'te kalır
+  Issue'suz küçük iş (chore): bu bölümü sil
+-->
 
 ## Nasıl test edildi
 
